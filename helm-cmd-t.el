@@ -8,6 +8,7 @@
 ;; Description: cmd-t style completion of files in repository
 ;; Author: Le Wang
 ;; Maintainer: Le Wang
+;; Package-Requires: ((helm "1.7.7"))
 
 ;; Created: Sat Nov  5 16:42:32 2011 (+0800)
 ;; Version: 0.1
