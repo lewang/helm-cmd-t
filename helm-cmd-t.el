@@ -454,7 +454,7 @@ With prefix arg C-u, run `helm-cmd-t-repos'.
   "Run Grep action from `helm-cmd-t-repos'."
   (interactive)
   (with-helm-alive-p
-    (helm-quit-and-execute-action 'helm-cmd-t-grep_)))
+    (helm-exit-and-execute-action 'helm-cmd-t-grep_)))
 
 (defun helm-cmd-t-grep_ (candidate-buffer)
   (apply 'run-with-timer 0.01 nil
