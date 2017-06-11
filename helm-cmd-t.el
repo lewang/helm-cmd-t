@@ -298,12 +298,15 @@ specified, then it is used to construct the root-data. "
          (>= line-count helm-cmd-t-cache-threshhold))
         ((not helm-cmd-t-cache-threshhold))))
 
-(defclass helm-cmd-t-source (helm-source-in-buffer helm-type-file)
-  ((action-transformer :initform helm-transform-file-load-el)
-   (filtered-candidate-transformer :initform helm-cmd-t-transform-candidates)
+(defclass helm-cmd-t-source (helm-source-in-buffer)
+  ((action-transformer :initform 'helm-transform-file-load-el)
+   (filtered-candidate-transformer :initform 'helm-cmd-t-transform-candidates)
    (helm-cmd-t-candidate-buffer
     :initarg :helm-cmd-t-candidate-buffer
-    :initform nil)))
+    :initform nil)
+   (fuzzy-match
+    :initarg :fuzzy-match
+    :initform 'helm-recentf-fuzzy-match)))
 
 (defun helm-cmd-t-get-create-source (repo-root-data &optional skeleton)
   "Get cached source or create new one.
