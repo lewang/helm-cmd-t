@@ -306,7 +306,8 @@ specified, then it is used to construct the root-data. "
     :initform nil)
    (fuzzy-match
     :initarg :fuzzy-match
-    :initform 'helm-recentf-fuzzy-match)))
+    :initform 'helm-recentf-fuzzy-match)
+   (action :initform 'helm-type-file-actions)))
 
 (defun helm-cmd-t-get-create-source (repo-root-data &optional skeleton)
   "Get cached source or create new one.
