@@ -50,6 +50,7 @@
 (eval-when-compile (require 'cl))
 
 (require 'helm-cmd-t)
+(require 'helm-x-files)
 
 (provide 'helm-C-x-b)
 
