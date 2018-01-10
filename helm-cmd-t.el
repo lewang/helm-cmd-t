@@ -84,6 +84,7 @@
 
 (eval-when-compile (require 'cl))
 
+(require 'format-spec)
 (require 'helm-config)
 (require 'helm-files)
 (require 'helm-grep)
