@@ -86,7 +86,7 @@
 
 (require 'format-spec)
 (require 'helm-config)
-(require 'helm-files)
+(require 'helm-for-files)
 (require 'helm-grep)
 (require 'helm-source)
 
