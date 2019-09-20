@@ -461,13 +461,6 @@ With prefix arg C-u, run `helm-cmd-t-repos'.
   (with-helm-alive-p
     (helm-exit-and-execute-action 'helm-cmd-t-grep)))
 
-(defun helm-cmd-t-grep_ (candidate-buffer)
-  (apply 'run-with-timer 0.01 nil
-         #'helm-cmd-t-grep
-         candidate-buffer
-         (when helm-current-prefix-arg
-           (list (helm-cmd-t-read-glob)))))
-
 ;;;###autoload
 (defun helm-cmd-t-grep (candidate-buffer &optional globs)
   "Grep action run from `helm-cmd-t-repos'.
